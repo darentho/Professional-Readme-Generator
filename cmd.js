@@ -1,6 +1,8 @@
+//Required Modules-------------------------------
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+const markdown = require();
 
 inquirer.createPromptModule([
   {
@@ -11,23 +13,21 @@ inquirer.createPromptModule([
   {
     type: "input",
     message: "What's your project description?",
-    name: "project description",
+    name: "description",
   },
   {
     type: "input",
-    message: "Does your project make use of dependencies?",
+    message: "Installation Requirements?",
     name: "installation",
   },
   {
-    type: "checkbox",
+    type: "input",
     message: "What Dependencies are required?",
     name: "dependencies",
-    choices: ["inquirer", "express", "nodemon"],
   },
   {
     type: "input",
-    message:
-      "Provide instructions and examples for use. Include screenshots as needed.",
+    message: "How can we use the app?",
     name: "usage",
   },
   {
@@ -55,5 +55,10 @@ inquirer.createPromptModule([
     type: "input",
     message: "Provide tests for project, and explain how to test (Optional).",
     name: "test",
+  },
+  {
+    type: "input",
+    message: "Enter your GitHub username: ",
+    name: "username",
   },
 ]);
