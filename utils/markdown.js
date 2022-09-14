@@ -1,5 +1,29 @@
+function renderLicenseBadge(license) {
+  if (license !== "None") {
+    return `![Badge](https://img.shields.io/badge/License-${license}-blue.svg)`;
+  }
+  return ``;
+}
+
+function renderLicenseLink(license) {
+  if (license !== "None") {
+    return `- [License](#license)`;
+  }
+  return ``;
+}
+
+function renderLicenseSection(license) {
+  if (license !== "None") {
+    return `## License
+      This application is covered by the ${license} license.`;
+  }
+  return ``;
+}
+
 function markdown(data) {
   return `# ${data.title}
+
+  ${renderLicenseBadge(data.license)}
 
   ## 🗃️ Description  ${data.description}
 
@@ -8,7 +32,7 @@ function markdown(data) {
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- ${renderLicenseLink(data.license)}
 - [Test](#test)
 - [Questions](#questions)
 
@@ -24,7 +48,7 @@ function markdown(data) {
 
   ## 📧 Email ${data.email}
 
-  ## 🔐 License ${data.license}
+  ## 🔐 ${renderLicenseSection(data.license)}
 
   ## 🧪 Test ${data.test}
 
