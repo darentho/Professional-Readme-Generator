@@ -29,31 +29,39 @@ This app is a high-quality README generator that allows the user to generate a R
 
   🦮 Run "node cmd.js" answer all the questions and your README.md file will be generated.
 
-  ## Contributing
+## Commandline Usage
 
-  🤝 Any contributions are welcome.
+https://watch.screencastify.com/v/jwyVLEWibzEZfMeFXgmc
 
-  ## Name
+## Code and README.md
 
-  💳 Alberto Monroy
+https://watch.screencastify.com/v/pJ48C8DQ0zpbyI9xcrsv
 
-  ## Email
+## Contributing
 
-  📧 firewind3882@gmail.com
+🤝 Any contributions are welcome.
 
-  ## ## License
+## Name
+
+💳 Alberto Monroy
+
+## Email
+
+📧 firewind3882@gmail.com
+
+## ## License
 
       This application is covered by the ISC license.
 
-  ## Test
+## Test
 
-  🧪
+🧪
 
-  ## Notes
+## Notes
 
-  I have downgrade the inquirer version because according to the new version there's a new way, I will eventually upgrade but it would've taken more time to get the challenge done.
+I have downgrade the inquirer version because according to the new version there's a new way, I will eventually upgrade but it would've taken more time to get the challenge done.
 
-  ## Questions
+## Questions
 
 If there's any questions you'd like to shoot my way, Email me at: firewind3882@gmail.com
 
