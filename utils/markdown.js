@@ -1,3 +1,4 @@
+//Functions for License -----------------------------------------------------------
 function renderLicenseBadge(license) {
   if (license !== "None") {
     return `![Badge](https://img.shields.io/badge/License-${license}-blue.svg)`;
@@ -20,37 +21,53 @@ function renderLicenseSection(license) {
   return ``;
 }
 
-function markdown(data) {
+function renderNotes(noteDetails) {
+  return `## Notes 
+  ${noteDetails}`;
+}
+
+function myMarkdown(data) {
   return `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
 
-  ## 🗃️ Description  ${data.description}
+  ## 🗃️ Description  
+  ${data.description}
 
   ## Table of Content
-- [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [Installation](#Installation)
+- [Dependencies](#Dependencies)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
 - ${renderLicenseLink(data.license)}
-- [Test](#test)
-- [Questions](#questions)
+- [Test](#Test)
+- [Notes](#Notes)
+- [Questions](#Questions)
 
-  ## 💽 Installation ${data.installation}
+  ## Installation 
+  💽 ${data.installation}
 
-  ## ⚒️ Dependencies ${data.dependencies}
+  ## Dependencies 
+  ⚒️ ${data.dependencies}
 
-  ## 🦮 Usage ${data.usage}
+  ## Usage 
+  🦮 ${data.usage}
 
-  ## 🤝 Contributing ${data.contributing}
+  ## Contributing 
+  🤝 ${data.contributing}
 
-  ## 💳 Name ${data.name}
+  ## Name 
+  💳 ${data.name}
 
-  ## 📧 Email ${data.email}
+  ## Email 
+  📧 ${data.email}
 
-  ## 🔐 ${renderLicenseSection(data.license)}
+  ## ${renderLicenseSection(data.license)}
 
-  ## 🧪 Test ${data.test}
+  ## Test 
+  🧪 ${data.test}
+
+  ${renderNotes(data.noteDetails)}
 
   ## ❓ Questions
 
@@ -61,4 +78,4 @@ Find me on GitHub: [${data.username}](https://github.com/${data.username})
   `;
 }
 
-module.exports = markdown;
+module.exports = myMarkdown;
